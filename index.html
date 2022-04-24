@@ -23,42 +23,85 @@
         <a class="logo header__logo" href="index.html"
           >Web<span class="logo__black">Studio</span></a
         >
-        <nav class="navigate">
-          <ul class="navigate__list">
-            <li class="navitage__item">
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-expanded="false"
+        >
+          <svg class="menu-icon" width="24" height="16" aria-label="Меню">
+            <use href="./images/icon.svg#menu_mob"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu js-menu-container">
+          <button
+            class="mobile-menu__close js-close-menu"
+            type="button"
+            aria-expanded="false"
+          >
+            <svg class="menu-icon" width="19" height="19" aria-label="Меню">
+              <use class="menu-close" href="./images/icon.svg#close_mob"></use>
+            </svg>
+          </button>
+          <nav class="navigate">
+            <ul class="navigate__list">
+              <li class="navitage__item">
+                <a
+                  href="index.html"
+                  class="navigate__link navigate__link--current"
+                  >Студия</a
+                >
+              </li>
+
+              <li class="navitage__item">
+                <a href="portfolio.html" class="navigate__link">Портфолио</a>
+              </li>
+              <li class="navitage__item">
+                <a href="#" class="navigate__link">Контакты </a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contact">
+            <li class="contact__item">
               <a
-                href="index.html"
-                class="navigate__link navigate__link--current"
-                >Студия</a
+                href="mailto:info@devstudio.com"
+                class="contact__link contact__link-text"
+              >
+                <svg class="contact__icon" width="16" height="12">
+                  <use href="./images/icon.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="navitage__item">
-              <a href="portfolio.html" class="navigate__link">Портфолио</a>
-            </li>
-            <li class="navitage__item">
-              <a href="#" class="navigate__link">Контакты </a>
+
+            <li class="contact__item">
+              <a
+                href="tel:+380961111111"
+                class="contact__link contact__link-hover"
+                ><svg class="contact__icon" width="10" height="16">
+                  <use href="./images/icon.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link">
-              <svg class="contact__icon" width="16" height="12">
-                <use href="./images/icon.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link"
-              ><svg class="contact__icon" width="10" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Instagram</a>
+            </li>
+            <li class="menu__item"><span class="menu__line"></span></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Twitter</a>
+            </li>
+            <li class="menu__item"><span class="menu__line"></span></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Facebook</a>
+            </li>
+            <li class="menu__item"><span class="menu__line"></span></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -173,12 +216,40 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                class="team__image"
-                src="images/Igor.jpg"
-                width="270"
-                alt="Igor"
-              />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/pc/igor.jpg   1x,
+                    ./images/team/pc/igor2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/igor.jpg   1x,
+                    ./images/team/tablet/igor2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/igor.jpg   1x,
+                    ./images/team/mobile/igor2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team__image"
+                  src="images/Igor.jpg"
+                  width="450"
+                  alt="Igor"
+                />
+              </picture>
+
               <div class="team__meta">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -225,12 +296,40 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team-image"
-                src="images/olga.jpg"
-                width="270"
-                alt="Olga"
-              />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/pc/olga.jpg   1x,
+                    ./images/team/pc/olga2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/olga.jpg   1x,
+                    ./images/team/tablet/olga2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/olga.jpg   1x,
+                    ./images/team/mobile/olga2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team-image"
+                  src="images/olga.jpg"
+                  width="450"
+                  alt="Olga"
+                />
+              </picture>
+
               <div class="team__meta">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -273,12 +372,40 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="images/nikolay.jpg"
-                width="270"
-                alt="Nikolay"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/pc/nikolay.jpg   1x,
+                    ./images/team/pc/nikolay2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/nikolay.jpg   1x,
+                    ./images/team/tablet/nikolay2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/nikolay.jpg   1x,
+                    ./images/team/mobile/nikolay2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team__image"
+                  src="images/nikolay.jpg"
+                  width="450"
+                  alt="Nikolay"
+                />
+              </picture>
+
               <div class="team__meta">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -321,12 +448,40 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="images/mihail.jpg"
-                width="270"
-                alt="Mihail"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/pc/michail.jpg   1x,
+                    ./images/team/pc/michail2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/tablet/michail.jpg   1x,
+                    ./images/team/tablet/michail2x.jpg 2x
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/michail.jpg   1x,
+                    ./images/team/mobile/michail2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <img
+                  class="team__image"
+                  src="images/mihail.jpg"
+                  width="450"
+                  alt="Mihail"
+                />
+              </picture>
+
               <div class="team__meta">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -497,15 +652,15 @@
             <label for="mail">
               <input
                 class="subscribe__mail"
-                type="emale"
+                type="email"
                 name="mail"
                 id="mail"
-                placeholder="E-mail"
+                placeholder="email"
               />
             </label>
             <button class="subscribe__button" type="submit">
               Подписаться
-              <svg width="24" height="24">
+              <svg class="subscribe__icon" width="24" height="24">
                 <use href="images/icon.svg#send"></use>
               </svg>
             </button>
@@ -515,22 +670,23 @@
     </footer>
     <div data-modal class="backdrop backdrop--is-hidden">
       <div class="modal">
-        <button data-modal-close class="modal__close" tape="button">
-          <svg class="close-icon" width="11" height="11">
+        <button data-modal-close class="modal__close" type="button">
+          <svg class="modal__icon" width="11" height="11">
             <use href="./images/icon.svg#close"></use>
           </svg>
         </button>
         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
+
         <form class="form-feedback">
           <div class="form-wrapper">
             <label class="form-feedback__name" for="name"
               >Имя
               <input
-                class="subscribe__mail"
-                type="emale"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"/>
+                class="form-feedback__area"
+                type="text"
+                name="user-name"
+                id="name"
+              />
               <svg class="form-feedback__icon" width="18" height="18">
                 <use href="images/icon.svg#person-form"></use>
               </svg>
@@ -595,13 +751,14 @@
             </label>
           </div>
           <div class="button-wrapper">
-            <button class="form-feedback__button" tape="submit">
+            <button class="form-feedback__button" type="submit">
               Отправить
             </button>
           </div>
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
