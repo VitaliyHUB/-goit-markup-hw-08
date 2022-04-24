@@ -1,0 +1,51 @@
+.section--other__backgraund {
+  background-color: $portfolio-button;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: $basic-coller;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.team {
+  display: flex;
+}
+
+.team__meta {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__title {
+  color: $basic-coller;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.team__text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: $description-collor;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 16px;
+}
+
+.team__item {
+  background: $title-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}

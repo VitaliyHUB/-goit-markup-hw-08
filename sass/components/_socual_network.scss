@@ -1,0 +1,28 @@
+.social-network {
+  display: flex;
+  justify-content: center;
+}
+.social-network__link {
+  color: $logo-collor;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: color, background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $time-function;
+  &:hover,
+  &:focus {
+    color: $title-color;
+    background-color: $hover-collor-text;
+  }
+}
+
+.social-network__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-network__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,41 @@
+.section--no--pading__top {
+  padding-top: 0;
+}
+
+.occupation {
+  display: flex;
+}
+.occupation__description {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  font-weight: 700;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.14;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.occupation__item {
+  list-style-type: none;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: $basic-coller;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}

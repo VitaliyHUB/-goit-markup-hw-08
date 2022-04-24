@@ -1,0 +1,54 @@
+.hero {
+  background-color: $bacgraund;
+  text-align: center;
+  padding: 200px 0;
+}
+.overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/main-photo.jpg");
+  background-size: cover; /* на весь блок */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.16;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: $title-color;
+}
+
+.hero__button {
+  background-color: $hover-collor-text;
+  color: $title-color;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 200px;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: transparent;
+  transition-property: box-shadow, background-color, box-shadow;
+  transition-duration: $transition-duration;
+  transition-timing-function: $time-function;
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}

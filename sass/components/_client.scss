@@ -1,0 +1,28 @@
+.client {
+  text-decoration: note;
+  display: flex;
+}
+.client__link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  color: $logo-collor;
+  border: 1px solid $logo-collor;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  transition-property: color, background-color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $time-function;
+  &:hover,
+  &:focus {
+    color: $hover-collor-text;
+    border: 1px solid $hover-collor-text;
+  }
+}
+.client__item:not(:last-child) {
+  margin-right: 30px;
+}
+.client__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,182 @@
+.modal {
+  height: 582px;
+  width: 528px;
+  background-color: $title-color;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transition-timing-function: $time-function;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: $basic-coller;
+}
+/* Форма заявки */
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &:checked {
+    color: $hover-collor-text;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.form-feedback__button {
+  padding: 10px 55px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $title-color;
+  background: $hover-collor-text;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  transition: background-color $transition-duration $time-function;
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+  }
+}
+
+.form-feedback__name {
+  display: flex;
+  flex-direction: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $description-collor;
+}
+
+.form-feedback__policy {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $description-collor;
+  align-items: center;
+  justify-content: center;
+}
+.form-policy {
+  margin-top: 20px;
+}
+
+.form-feedback__link {
+  text-decoration-line: underline;
+  color: $hover-collor-text;
+}
+
+.form-feedback__comment {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: border $transition-duration $time-function;
+  &:focus {
+    border: 1px solid $hover-collor-text;
+    outline: none;
+  }
+}
+
+.form-feedback__area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 44px;
+
+  width: 448px;
+  height: 40px;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: border $transition-duration $time-function;
+  &:focus {
+    border: 1px solid $hover-collor-text;
+    outline: none;
+  }
+}
+.form-feedback__area:focus + .form-feedback__icon {
+  fill: $hover-collor-text;
+}
+.form-feedback__icon {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  transition: fill $transition-duration $time-function;
+}
+
+.form-feedback__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.form-feedback__check {
+  margin-right: 8.22px;
+  fill: var(--basic-coller);
+  border-radius: 2px;
+  background-size: contain;
+  transition-property: fill, background-color, background-image;
+  transition-duration: $transition-duration;
+  transition-timing-function: $time-function;
+}
+.form-feedback__checkbox:checked + .form-feedback__check {
+  fill: $hover-collor-text;
+  background-image: url(..//images/iconcheck.svg);
+  background-color: $hover-collor-text;
+}
+
+.modal__close {
+  display: block;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0 0;
+  align-items: center;
+  justify-content: center;
+  background-color: $title-color;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  color: $hover-collor-text;
+}
+.header__logo {
+  display: block;
+  padding: 24px 0;
+}
+
+.logo__black {
+  color: $basic-coller;
+}
+.logo__white {
+  color: $title-color;
+}

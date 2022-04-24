@@ -1,0 +1,43 @@
+.address-block {
+  margin-right: 70px;
+  flex-grow: 1;
+}
+.address__list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+.address__contact {
+  list-style-type: none;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $description-collor;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  transition: color $transition-duration $time-function;
+  &:focus,
+  &:hover {
+    color: $hover-collor-text;
+  }
+}
+
+.address__map {
+  color: $title-color;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  margin-bottom: 9px;
+  text-decoration: none;
+  font-style: normal;
+  transition: color $transition-duration $time-function;
+  &:focus,
+  &:hover {
+    color: $hover-collor-text;
+  }
+}
+
+.address_item:not(:last-child) {
+  margin-bottom: 9px;
+}

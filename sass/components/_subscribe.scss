@@ -1,0 +1,45 @@
+.subscribe {
+  margin-left: 93px;
+}
+.subscribe__title {
+  @extend %footer-title;
+}
+.subscribe__form {
+  display: inline-flex;
+}
+.subscribe__button {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: $title-color;
+  background-color: $hover-collor-text;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: backgraund-color $transition-duration $time-function;
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+  }
+}
+
+.subscribe__mail {
+  width: 358px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: inherit;
+  outline: none;
+  color: $title-color;
+}
