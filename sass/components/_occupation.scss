@@ -1,10 +1,15 @@
 .section--no--pading__top {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .occupation {
   display: flex;
 }
+
 .occupation__description {
   display: flex;
   position: absolute;
@@ -22,9 +27,11 @@
   color: $title-color;
   background-color: rgba(47, 48, 58, 0.8);
 }
+
 .occupation__item {
   list-style-type: none;
   position: relative;
+
   &:not(:last-child) {
     margin-right: 30px;
   }

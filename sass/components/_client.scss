@@ -1,9 +1,16 @@
 .client {
+  justify-content: center;
   text-decoration: note;
   display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
+
 .client__link {
-  width: 170px;
+  width: auto;
   height: 92px;
   display: flex;
   color: $logo-collor;
@@ -14,15 +21,49 @@
   transition-property: color, background-color;
   transition-duration: $transition-duration;
   transition-timing-function: $time-function;
+
   &:hover,
   &:focus {
     color: $hover-collor-text;
     border: 1px solid $hover-collor-text;
   }
 }
-.client__item:not(:last-child) {
-  margin-right: 30px;
+
+.client__item {
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+    height: 90px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 60px) / 3);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-child(-n + 3)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 5 * 30px) / 6);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
+
 .client__icon {
   fill: currentColor;
 }

@@ -1,11 +1,23 @@
 .address-block {
-  margin-right: 70px;
-  flex-grow: 1;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    flex-grow: 1;
+  }
 }
+
 .address__list {
   list-style-type: none;
   margin-top: 20px;
 }
+
 .address__contact {
   list-style-type: none;
   font-size: 14px;
@@ -16,6 +28,7 @@
   text-decoration: none;
   font-style: normal;
   transition: color $transition-duration $time-function;
+
   &:focus,
   &:hover {
     color: $hover-collor-text;
@@ -32,6 +45,7 @@
   text-decoration: none;
   font-style: normal;
   transition: color $transition-duration $time-function;
+
   &:focus,
   &:hover {
     color: $hover-collor-text;

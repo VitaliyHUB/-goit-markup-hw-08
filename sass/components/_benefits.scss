@@ -1,6 +1,5 @@
 .benefits__container {
   display: flex;
-  width: 270px;
   height: 120px;
   background-color: $portfolio-button;
   justify-content: center;
@@ -9,25 +8,53 @@
   margin-bottom: 30px;
 }
 
-.benefits {
-  display: inline-flex;
-}
-
 .benefits__item {
-  width: 270px;
-  &:not(:last-child) {
+  display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+
+    &:nth-last-child(-n + 1) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 352px;
     margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
 .benefits__title {
-  color: var(--basic-coller);
+  color: $basic-coller;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
+
 .benefits__text {
   color: $description-collor;
   font-weight: 400;
@@ -37,4 +64,15 @@
   margin: 0;
   padding: 0;
   margin-top: 10px;
+}
+
+.benefits {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }

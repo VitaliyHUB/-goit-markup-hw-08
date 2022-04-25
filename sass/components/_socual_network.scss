@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
 }
+
 .social-network__link {
   color: $logo-collor;
   width: 44px;
@@ -13,6 +14,7 @@
   transition-property: color, background-color;
   transition-duration: $transition-duration;
   transition-timing-function: $time-function;
+
   &:hover,
   &:focus {
     color: $title-color;
@@ -23,6 +25,7 @@
 .social-network__item:not(:last-child) {
   margin-right: 10px;
 }
+
 .social-network__icon {
   fill: currentColor;
 }

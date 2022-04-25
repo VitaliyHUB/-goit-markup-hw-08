@@ -1,16 +1,29 @@
 .modal {
-  height: 582px;
-  width: 528px;
   background-color: $title-color;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
+  max-width: 450px;
   padding: 40px;
+  border-radius: 4px;
   transition-timing-function: $time-function;
   transition-property: transform;
   transition-duration: $transition-duration;
   transform: translate(-50%, -50%) scale(1);
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
+
 .modal__title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -20,15 +33,18 @@
 
   color: $basic-coller;
 }
+
 /* Форма заявки */
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
+
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+
   &:checked {
     color: $hover-collor-text;
   }
@@ -39,6 +55,7 @@
   justify-content: center;
   margin-top: 30px;
 }
+
 .form-feedback__button {
   padding: 10px 55px;
   font-weight: bold;
@@ -55,6 +72,7 @@
   border-radius: 4px;
   border: transparent;
   transition: background-color $transition-duration $time-function;
+
   &:hover,
   &:focus {
     background-color: $button-hover;
@@ -80,7 +98,13 @@
   color: $description-collor;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.1;
+  }
 }
+
 .form-policy {
   margin-top: 20px;
 }
@@ -91,7 +115,7 @@
 }
 
 .form-feedback__comment {
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   font-weight: 400;
@@ -105,6 +129,7 @@
   cursor: pointer;
   margin-top: 4px;
   transition: border $transition-duration $time-function;
+
   &:focus {
     border: 1px solid $hover-collor-text;
     outline: none;
@@ -119,19 +144,21 @@
   padding-bottom: 12px;
   padding-left: 44px;
 
-  width: 448px;
   height: 40px;
   margin-top: 4px;
   cursor: pointer;
   transition: border $transition-duration $time-function;
+
   &:focus {
     border: 1px solid $hover-collor-text;
     outline: none;
   }
 }
-.form-feedback__area:focus + .form-feedback__icon {
+
+.form-feedback__area:focus+.form-feedback__icon {
   fill: $hover-collor-text;
 }
+
 .form-feedback__icon {
   position: absolute;
   top: 30px;
@@ -149,6 +176,7 @@
   border: 0;
   clip: rect(0 0 0 0);
 }
+
 .form-feedback__check {
   margin-right: 8.22px;
   fill: var(--basic-coller);
@@ -158,7 +186,8 @@
   transition-duration: $transition-duration;
   transition-timing-function: $time-function;
 }
-.form-feedback__checkbox:checked + .form-feedback__check {
+
+.form-feedback__checkbox:checked+.form-feedback__check {
   fill: $hover-collor-text;
   background-image: url(..//images/iconcheck.svg);
   background-color: $hover-collor-text;
@@ -177,6 +206,17 @@
   background-color: $title-color;
   border-radius: 50%;
   box-sizing: border-box;
+  color: $basic-coller;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: color $transition-duration $time-function;
+
+  &:hover,
+  &:focus {
+    color: $button-hover;
+  }
+}
+
+.modal__icon {
+  fill: currentColor;
 }

@@ -1,3 +1,9 @@
+.network {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
 .network__title {
   @extend %footer-title;
 }
@@ -6,6 +12,7 @@
   color: $title-color;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+
   &:not(:last-child) {
     margin-right: 10px;
   }
